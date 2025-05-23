@@ -18,7 +18,8 @@ public class personaje {
         System.out.println(nombre + " ataca a " + oponente.nombre + " con una fuerza de " + fuerza + " puntos.");
         oponente.defensa -= fuerza;
         if (oponente.defensa< 0) oponente.defensa= 0;
-        System.out.println(oponente.nombre + " ahora tiene " + oponente.defensa + " puntos de resistencia.");
+        System.out.println(oponente.nombre + " ahora tiene " + oponente.defensa + " de vida");
+
     }
     //metodo para mostrar las estadisticas del personaje
     public void mostrarEstadisticas(){
@@ -30,7 +31,7 @@ public class personaje {
     //metodo para aumentar la defensa y la vida
     public void recuperarse(){
         defensa += 20;
-        System.out.println(nombre + " se ha recuperado y ahora tiene " + defensa + " puntos de resistencia.");
+        System.out.println(nombre + " se ha recuperado y ahora tiene " + defensa + " puntos de vida");
         }
 
 }

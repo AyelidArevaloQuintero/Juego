@@ -17,20 +17,21 @@ public class CondePesadilla extends personaje{
             oponente.defensa -= dobleAtaque;
             if(oponente.defensa < 0) oponente.defensa = 0;
             System.out.println(oponente.nombre + " ahora tiene " + oponente.defensa +
-                    " puntos de resistencia ");
+                    " puntos de de vida ");
             habilidadTrampa--;
         }else{
             System.out.println("El conde pesadilla no puede usar la habilidad de trampa nuevamente");
         }
     }
-    public void robarAtaque(personaje oponente){
+    public void controlMental(personaje oponente){
         //guardar la fuerza original
         int fuerzaOriginal = this.fuerza;
         if(usosAtaqueRobado > 0){
             System.out.println(nombre + " roba la cantidad de ataque de " + oponente.nombre + " multiplicada por 2");
             this.fuerza = oponente.fuerza * 2;
             oponente.defensa -= this.fuerza;
-            System.out.println("le aplica la potencia de sus golpes dejandolo a " + oponente.defensa + " puntos de vida ");
+            System.out.println(nombre + " manipula el cerebro de " + oponente.nombre +
+                    " y hace que se auto-ataque multiplicado por 2");
             if(oponente.defensa < 0) {oponente.defensa = 0;}
             //para que solo se pueda usar una vez
             usosAtaqueRobado--;
